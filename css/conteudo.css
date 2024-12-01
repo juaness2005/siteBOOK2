@@ -1,0 +1,241 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0.5));
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.692);
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column; /* Elementos empilhados por padrão */
+    gap: 20px; /* Espaçamento entre elementos */
+}
+
+/* Estilo para texto e imagem lado a lado */
+.texto-e-imagem {
+    display: flex;
+    gap: 15px; /* Espaço entre o texto e a imagem */
+    align-items: flex-start; /* Alinha ao topo */
+}
+
+.texto {
+    flex: 1; /* Texto ocupa o espaço restante */
+    text-align: justify; /* Justifica o texto */
+}
+
+.imagem {
+    flex: 0 0 150px; /* Largura fixa para a imagem */
+    max-width: 150px;
+}
+
+.imagem img {
+    width: 100%; /* Imagem ocupa toda a largura do contêiner */
+    height: auto; /* Mantém proporção da imagem */
+}
+
+h2, p {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .texto-e-imagem {
+        flex-direction: column; /* Alinha imagem e texto verticalmente */
+        align-items: center; /* Centraliza itens */
+        text-align: center; /* Centraliza texto */
+    }
+
+    .imagem {
+        flex: none; /* Remove largura fixa */
+        max-width: 100%; /* Imagem ocupa largura total */
+    }
+
+    .imagem img {
+        max-width: 300px; /* Limita o tamanho da imagem */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px; /* Reduz espaçamento interno */
+    }
+
+    .texto-e-imagem {
+        gap: 10px; /* Reduz espaço entre imagem e texto */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Ajusta tamanho do título */
+    }
+
+    p {
+        font-size: 1rem; /* Ajusta tamanho do parágrafo */
+    }
+}
+
+
+/* Estilização geral da caixa */
+.caixa {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    width: 150px; /* Ajuste conforme necessário */
+    border: 1px solid #1e1f50; /* Adiciona uma borda à caixa */
+    padding: 10px; /* Espaço interno */
+    background-color: #1e1f50;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease; /* Animação de transformação */
+    box-shadow:  0 4px 6px rgba(0, 0, 0, 0.692);
+  }
+
+  .caixa:hover {
+    transform: scale(1.05); /* Aumenta a caixa em 5% quando passar o mouse */
+    background-color: rgb(9, 9, 41);
+    border: rgb(9, 9, 41);
+    box-shadow:  0 4px 6px rgba(88, 85, 219, 0.692);
+  }
+  
+  /* Estilização da imagem */
+  .caixa .imagem {
+    width: 120px; /* Largura fixa */
+    height: 170px; /* Altura fixa */
+    object-fit: contain; /* Garante que a imagem seja exibida inteira */
+    display: flex; /* Garante que ela seja um bloco isolado */
+  }
+  
+  
+  /* Contêiner para os botões */
+.botao-container {
+    display: flex; /* Faz os botões ficarem lado a lado */
+    gap: 10px; /* Espaço entre os botões */
+    justify-content: center; /* Alinha os botões ao centro */
+}
+
+/* Botão */
+.botao {
+    display: block; /* Garante que o link se comporte como um bloco */
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Usa a cor padrão do texto */
+    width: auto; /* Tamanho automático do botão */
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+/* Estilização do texto dentro do botão */
+.botao-texto {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px; /* Espaçamento entre a imagem e o texto */
+    color: #ffffff; /* Cor do texto */
+    font-size: 12px; /* Tamanho do texto */
+    cursor: pointer; /* Mudança de cursor */
+    text-align: center; /* Centraliza o texto */
+    display: block; /* Garante comportamento de bloco */
+    width: 100%; /* Garante que o texto ocupe toda a largura */
+}
+
+/* Ajuste para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+    .texto-e-imagem {
+        flex-direction: column; /* Empilha o texto e a imagem */
+        align-items: center; /* Centraliza os itens */
+        gap: 15px; /* Espaçamento entre texto e imagem */
+    }
+
+    .imagem {
+        max-width: 120px; /* Ajusta a largura da imagem */
+    }
+
+    h2 {
+        font-size: 18px; /* Reduz tamanho do título */
+    }
+
+    p {
+        font-size: 14px; /* Reduz tamanho do texto */
+    }
+
+    .botao-container {
+        flex-wrap: wrap; /* Permite que os botões quebrem linha */
+        gap: 10px; /* Espaço entre botões */
+    }
+
+    .botao {
+        flex: 0 0 calc(50% - 10px); /* Divide os botões em duas colunas */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+/* Ajuste para telas menores que 768px (tablets) */
+@media (max-width: 768px) {
+    .texto-e-imagem {
+        flex-direction: column; /* Empilha o texto e a imagem */
+        align-items: center; /* Centraliza os itens */
+        gap: 15px; /* Espaçamento entre texto e imagem */
+    }
+
+    .imagem {
+        max-width: 120px; /* Ajusta a largura da imagem */
+    }
+
+    h2 {
+        font-size: 18px; /* Reduz tamanho do título */
+    }
+
+    p {
+        font-size: 14px; /* Reduz tamanho do texto */
+    }
+
+    .botao-container {
+        display: grid; /* Usa grid para layout */
+        grid-template-columns: repeat(2, 1fr); /* 2 botões por linha */
+        gap: 10px; /* Espaço entre botões */
+    }
+
+    .botao {
+        text-align: center; /* Centraliza o texto */
+        padding: 10px; /* Ajusta espaçamento interno */
+    }
+
+  
+}
+
+/* Ajuste para telas menores que 480px (celulares) */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Reduz o espaçamento interno */
+        margin: 10px; /* Reduz margens externas */
+    }
+
+    .texto-e-imagem {
+        flex-direction: column; /* Empilha texto e imagem */
+        align-items: center; /* Centraliza conteúdo */
+        text-align: center; /* Centraliza o texto */
+        gap: 10px; /* Reduz o espaçamento entre itens */
+    }
+
+    .imagem {
+        max-width: 100px; /* Reduz tamanho da imagem */
+    }
+
+    h2 {
+        font-size: 16px; /* Reduz tamanho do título */
+    }
+
+    p {
+        font-size: 12px; /* Texto menor */
+    }
+
+    .botao-container {
+        grid-template-columns: repeat(2, 1fr); /* Garante 2 botões por linha */
+        gap: 8px; /* Espaço menor entre botões */
+    }
+
+    .botao {
+        text-align: center; /* Centraliza texto do botão */
+        padding: 8px; /* Ajusta padding */
+    }
+
+ 
+}
